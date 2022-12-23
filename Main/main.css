@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'SaenggeoJincheon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/SaenggeoJincheon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+html,body {
+    height: 100%;
+    
+}
+
+#container {
+    display: flex;
+    background-color: black;
+    height: 100%;
+}
+h1 {
+    color: white;
+    font-size: 50px;
+    font-family: 'SaenggeoJincheon'
+}
+h2 {
+    color: white;
+    font-family: 'Pretendard-Regular';
+}

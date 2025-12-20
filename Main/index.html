@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeong Woo (Craft374) - Developer Portfolio</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (아이콘 사용) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 네이비 기반의 다크 테마 */
+        :root {
+            --color-navy-dark: #0a0a20;
+            --color-navy-medium: #15153a;
+            --color-accent-blue: #38bdf8; /* sky-400 */
+            --color-accent-purple: #a78bfa; /* violet-400 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy-dark);
+            color: #e5e5e5;
+            transition: background-color 0.3s;
+        }
+        .section-title {
+            color: var(--color-accent-blue);
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+        /* 스크롤 애니메이션 초기 상태 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition-delay: var(--delay, 0s);
+        }
+        /* 스크롤 애니메이션 활성 상태 */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* 스킬 카드 호버 모션 */
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+            border-color: var(--color-accent-blue);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-[#0a0a20] bg-opacity-95 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-wider text-white hover:text-cyan-400 transition-colors">
+                Craft374
+            </a>
+            <div class="space-x-4 hidden md:flex text-sm font-medium">
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-[80vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(10,10,32,1) 0%, rgba(10,10,32,0.9) 20%, rgba(10,10,32,0.9) 80%, rgba(10,10,32,1) 100%), url('https://placehold.co/1920x1080/0d0d33/1e1e4c?text=NEON+ABSTRACT');">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-4 animate-fadeIn reveal" style="--delay: 0.2s; color: var(--color-accent-blue);">
+                    JEONG WOO
+                </h1>
+                <p class="text-2xl sm:text-4xl font-light text-gray-300 reveal" style="--delay: 0.6s;">
+                    (Craft374)
+                </p>
+                <p class="mt-8 text-xl sm:text-2xl text-gray-400 font-medium reveal" style="--delay: 1s;">
+                    코딩을 잘하고 싶은 개발자입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 sm:py-32 container mx-auto px-4 reveal">
+            <h2 class="section-title text-4xl font-bold mb-12 text-center reveal">ABOUT ME</h2>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                
+                <!-- Education -->
+                <div class="p-6 rounded-xl bg-gray-900 shadow-2xl reveal" style="--delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-white">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-3 text-cyan-400"></i> 학력 (Education)
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4 text-gray-300">
+                        <li>연세대학교 미래캠퍼스 데이터사이언스 학부 25학번 재학 중</li>
+                        <li>양일고등학교</li>
+                        <li>양일중학교</li>
+                        <li>강상초등학교</li>
+                    </ul>
+                </div>
+
+                <!-- Awards & Honors -->
+                <div class="p-6 rounded-xl bg-gray-900 shadow-2xl reveal" style="--delay: 0.8s;">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-white">
+                        <i data-lucide="trophy" class="w-6 h-6 mr-3 text-cyan-400"></i> 수상 및 경력 (Awards & Honors)
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4 text-gray-300">
+                        <li>**2025년 연세대학교 미래캠퍼스 AI 사피엔스 경진대회** - 최우수상</li>
+                        <li>**2019년 제 2회 메이커 히어로즈 대회** (팀명: System Halted) - 우수상</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 sm:py-32 container mx-auto px-4 reveal">
+            <h2 class="section-title text-4xl font-bold mb-16 text-center reveal">SKILLS & TECH STACKS</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+                <!-- Skill Card Template -->
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 0.1s;">
+                    <i data-lucide="code" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">C#</p>
+                </div>
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 0.3s;">
+                    <i data-lucide="code" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">Kotlin</p>
+                </div>
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 0.5s;">
+                    <i data-lucide="coffee" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">Java</p>
+                </div>
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 0.7s;">
+                    <i data-lucide="variable" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">Python</p>
+                </div>
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 0.9s;">
+                    <i data-lucide="chip" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">Raspberry Pi</p>
+                </div>
+                <div class="skill-card flex flex-col items-center p-4 border-2 border-transparent rounded-xl bg-gray-800/30 reveal" style="--delay: 1.1s;">
+                    <i data-lucide="gauge" class="w-12 h-12 mb-3 text-cyan-400"></i>
+                    <p class="text-lg font-medium">Arduino</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 sm:py-32 container mx-auto px-4 reveal">
+            <h2 class="section-title text-4xl font-bold mb-12 text-center reveal">PROJECTS (주요 저장소)</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Project Card 1 -->
+                <div class="p-6 rounded-xl bg-gray-800 hover:bg-gray-700/50 transition-all reveal" style="--delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Minecraft\_server\_manger</h3>
+                    <p class="text-sm font-medium text-cyan-400 mb-4">Python</p>
+                    <p class="text-gray-400">마인크래프트 서버 관리를 위한 프로젝트입니다.</p>
+                    <a href="https://github.com/Craft374/Minecraft_server_manger" target="_blank" class="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                        GitHub에서 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="p-6 rounded-xl bg-gray-800 hover:bg-gray-700/50 transition-all reveal" style="--delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">User-Friendly-AI-Assistant</h3>
+                    <p class="text-sm font-medium text-cyan-400 mb-4">Python</p>
+                    <p class="text-gray-400">사용자 친화적인 AI 비서 개발 프로젝트입니다.</p>
+                    <a href="https://github.com/Craft374/User-Friendly-AI-Assistant" target="_blank" class="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                        GitHub에서 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="p-6 rounded-xl bg-gray-800 hover:bg-gray-700/50 transition-all reveal" style="--delay: 0.6s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">print-stat</h3>
+                    <p class="text-sm font-medium text-cyan-400 mb-4">Java</p>
+                    <p class="text-gray-400">RCON 정보를 서버에 출력하는 플러그인입니다.</p>
+                    <a href="https://github.com/Craft374/print-stat" target="_blank" class="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                        GitHub에서 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="p-6 rounded-xl bg-gray-800 hover:bg-gray-700/50 transition-all reveal" style="--delay: 0.8s;">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Yangil\_Study\_Planner</h3>
+                    <p class="text-sm font-medium text-cyan-400 mb-4">C#</p>
+                    <p class="text-gray-400">학습 계획 관리 Change-maker 프로젝트입니다.</p>
+                    <a href="https://github.com/Craft374/Yangil_Study_Planner" target="_blank" class="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                        GitHub에서 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 sm:py-32 container mx-auto px-4 reveal">
+            <h2 class="section-title text-4xl font-bold mb-12 text-center reveal">CONTACT & SNS</h2>
+            
+            <div class="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto">
+                
+                <a href="mailto:Leejeongwoo1103@gmail.com" target="_blank" class="p-4 rounded-full bg-gray-800 hover:bg-cyan-500/20 transition-all reveal" style="--delay: 0.2s;">
+                    <i data-lucide="mail" class="w-8 h-8 text-white hover:text-cyan-400 transition-colors"></i>
+                </a>
+                
+                <a href="https://github.com/Craft374" target="_blank" class="p-4 rounded-full bg-gray-800 hover:bg-cyan-500/20 transition-all reveal" style="--delay: 0.4s;">
+                    <i data-lucide="github" class="w-8 h-8 text-white hover:text-cyan-400 transition-colors"></i>
+                </a>
+
+                <a href="https://youtube.com/c/JCraft374" target="_blank" class="p-4 rounded-full bg-gray-800 hover:bg-cyan-500/20 transition-all reveal" style="--delay: 0.6s;">
+                    <i data-lucide="youtube" class="w-8 h-8 text-white hover:text-cyan-400 transition-colors"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/craft374_/" target="_blank" class="p-4 rounded-full bg-gray-800 hover:bg-cyan-500/20 transition-all reveal" style="--delay: 0.8s;">
+                    <i data-lucide="instagram" class="w-8 h-8 text-white hover:text-cyan-400 transition-colors"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 mt-12">
+        <div class="container mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Jeong Woo (Craft374) Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide 아이콘 렌더링
+        lucide.createIcons();
+
+        // 스크롤 시 요소 나타나는 애니메이션 (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // 한 번만 실행
+                }
+            });
+        }, {
+            threshold: 0.1 // 요소의 10%가 보일 때 작동
+        });
+
+        // 'reveal' 클래스가 붙은 모든 요소를 관찰
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 스킬 카드에 호버 시 아이콘 색상 변경
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('text-cyan-400');
+                    icon.classList.add('text-white');
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('text-white');
+                    icon.classList.add('text-cyan-400');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

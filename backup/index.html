@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Craft374 | Portfolio</title>
+    <meta
+      name="description"
+      content="Craft374의 프로젝트와 작업을 담은 포트폴리오."
+    />
+    <meta name="theme-color" content="#0c1015" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="#top" aria-label="맨 위로 이동">
+          <span class="brand__mark">C</span>
+          <span class="brand__text">
+            <strong>Craft374</strong>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="메뉴 열기"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+          <a href="#projects" data-nav-link>Projects</a>
+          <a href="#about" data-nav-link>About</a>
+          <a href="#contact" data-nav-link>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="intro">
+        <div class="shell hero__inner">
+          <div class="hero__copy" data-reveal>
+            <h1>
+              게임과 도구를
+              <br />
+              만듭니다.
+            </h1>
+            <p class="hero__lede">
+              직접 만들고 끝까지 다듬는 개발자 Craft374입니다.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projects">Projects</a>
+              <a class="button button--secondary" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <aside class="hero__panel" data-reveal>
+            <div class="hero-facts">
+              <article class="hero-card hero-card--stat">
+                <strong>2016 -</strong>
+              </article>
+              <article class="hero-card hero-card--stat">
+                <strong>2 Awards</strong>
+              </article>
+              <article class="hero-card hero-card--stat">
+                <strong>Game · Tool · AI</strong>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <h2>About</h2>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-card" data-reveal>
+              <h3>빠르게 만듭니다</h3>
+              <p>아이디어를 바로 형태로 옮깁니다.</p>
+            </article>
+
+            <article class="summary-card" data-reveal>
+              <h3>시스템을 좋아합니다</h3>
+              <p>규칙과 루프가 보이는 구조를 만듭니다.</p>
+            </article>
+
+            <article class="summary-card" data-reveal>
+              <h3>툴도 만듭니다</h3>
+              <p>반복을 줄이는 도구를 함께 만듭니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="projects">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <h2>Projects</h2>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card" data-reveal>
+              <div class="project-card__media">
+                <div class="project-carousel" data-carousel>
+                  <div class="project-carousel__track">
+                    <figure class="project-carousel__slide is-active">
+                      <img
+                        src="../assets/projects/prism-1.webp"
+                        alt="Prism 프로젝트 화면 1"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <figure class="project-carousel__slide">
+                      <img
+                        src="../assets/projects/prism-2.webp"
+                        alt="Prism 프로젝트 화면 2"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <figure class="project-carousel__slide">
+                      <img
+                        src="../assets/projects/prism-3.webp"
+                        alt="Prism 프로젝트 화면 3"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <button class="project-carousel__button project-carousel__button--prev" type="button" data-carousel-prev aria-label="이전 이미지">
+                    <span aria-hidden="true">‹</span>
+                  </button>
+                  <button class="project-carousel__button project-carousel__button--next" type="button" data-carousel-next aria-label="다음 이미지">
+                    <span aria-hidden="true">›</span>
+                  </button>
+                  <div class="project-carousel__dots">
+                    <button class="project-carousel__dot is-active" type="button" data-carousel-dot="0" aria-label="Prism 이미지 1"></button>
+                    <button class="project-carousel__dot" type="button" data-carousel-dot="1" aria-label="Prism 이미지 2"></button>
+                    <button class="project-carousel__dot" type="button" data-carousel-dot="2" aria-label="Prism 이미지 3"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card__body">
+                <h3>Prism</h3>
+                <p>해킹 게임 데모 프로젝트입니다.</p>
+                <div class="project-card__actions">
+                  <a href="https://github.com/Craft374/Prism" target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                  <a href="http://prism-project.kro.kr/" target="_blank" rel="noreferrer">
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <div class="project-card__media">
+                <img
+                  src="../assets/projects/assistant-demo.webp"
+                  alt="User-Friendly AI Assistant 대표 화면"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-card__body">
+                <h3>User-Friendly AI Assistant</h3>
+                <p>macOS 작업을 자연어로 연결한 AI 도구입니다.</p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/Craft374/User-Friendly-AI-Assistant"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <div class="project-card__media project-card__media--root">
+                <div class="video-frame">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/mkcbecmEHtA?rel=0&modestbranding=1"
+                    title="Root 프로젝트 영상"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="project-card__body">
+                <h3>Root</h3>
+                <p>스터디 플래너 앱 프로젝트입니다.</p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/Craft374/Yangil_Study_Planner"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.youtube.com/watch?v=mkcbecmEHtA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Video
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <div class="project-card__media">
+                <div class="project-carousel" data-carousel>
+                  <div class="project-carousel__track">
+                    <figure class="project-carousel__slide is-active">
+                      <img
+                        src="../assets/projects/emsr-dashboard-1.webp"
+                        alt="EMSR 프로젝트 화면 1"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <figure class="project-carousel__slide">
+                      <img
+                        src="../assets/projects/emsr-dashboard-2.webp"
+                        alt="EMSR 프로젝트 화면 2"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <figure class="project-carousel__slide">
+                      <img
+                        src="../assets/projects/emsr-dashboard-3.webp"
+                        alt="EMSR 프로젝트 화면 3"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <button class="project-carousel__button project-carousel__button--prev" type="button" data-carousel-prev aria-label="이전 이미지">
+                    <span aria-hidden="true">‹</span>
+                  </button>
+                  <button class="project-carousel__button project-carousel__button--next" type="button" data-carousel-next aria-label="다음 이미지">
+                    <span aria-hidden="true">›</span>
+                  </button>
+                  <div class="project-carousel__dots">
+                    <button class="project-carousel__dot is-active" type="button" data-carousel-dot="0" aria-label="EMSR 이미지 1"></button>
+                    <button class="project-carousel__dot" type="button" data-carousel-dot="1" aria-label="EMSR 이미지 2"></button>
+                    <button class="project-carousel__dot" type="button" data-carousel-dot="2" aria-label="EMSR 이미지 3"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card__body">
+                <h3>EMSR</h3>
+                <p>서버 설치와 관리를 한 화면으로 묶은 툴입니다.</p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/Craft374/Minecraft_server_manger"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="minor-projects" data-reveal>
+            <h3 class="minor-projects__title">More</h3>
+            <div class="minor-projects__grid">
+              <article class="minor-card">
+                <div class="minor-card__meta">
+                  <span>In Progress</span>
+                  <span>Character AI</span>
+                </div>
+                <h4>Arona Support</h4>
+                <p>화면 이해, 음성, 감정 표현을 엮는 캐릭터형 AI 비서 프로젝트.</p>
+                <div class="minor-card__actions">
+                  <span>In Progress</span>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <div class="minor-card__meta">
+                  <span>Rebuild Track</span>
+                  <span>Incremental Game</span>
+                </div>
+                <h4>Electron Expansion</h4>
+                <p>웹 공부와 함께 증분 게임 구조를 다시 설계하고 있는 실험 축.</p>
+                <div class="minor-card__actions">
+                  <span>In Progress</span>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <div class="minor-card__meta">
+                  <span>In Progress</span>
+                  <span>Narrative UI</span>
+                </div>
+                <h4>Story Archive</h4>
+                <p>Ren'Py로 게임식 대화 흐름과 감상 경험을 정리하는 진행형 프로젝트.</p>
+                <div class="minor-card__actions">
+                  <span>In Progress</span>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>simple edit</h4>
+                <p>간단한 웹 이미지 편집 도구.</p>
+                <div class="minor-card__actions">
+                  <a href="https://craft374.github.io/simple_edit/" target="_blank" rel="noreferrer">Demo</a>
+                  <a href="https://github.com/Craft374/simple_edit" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>Game Library</h4>
+                <p>개인 게임 노트 웹 프로젝트.</p>
+                <div class="minor-card__actions">
+                  <a href="http://game-info.kro.kr/" target="_blank" rel="noreferrer">Site</a>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>adofai_maplist</h4>
+                <p>게임 맵 파일 정리 도구.</p>
+                <div class="minor-card__actions">
+                  <a href="https://github.com/Craft374/adofai_maplist" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>Pyojeol-checker</h4>
+                <p>멜로디 유사도 분석 프로젝트.</p>
+                <div class="minor-card__actions">
+                  <a href="https://github.com/Craft374/Scientific_Task_Study" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>Dos Game</h4>
+                <p>터미널 기반 게임 실험작.</p>
+                <div class="minor-card__actions">
+                  <a href="https://github.com/Craft374/Dos_Game" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </article>
+
+              <article class="minor-card">
+                <h4>news-pick</h4>
+                <p>경제 뉴스를 모아 보여주는 실험 프로젝트.</p>
+                <div class="minor-card__actions">
+                  <span>Private</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="contact" id="contact">
+      <div class="shell contact__inner">
+        <div class="contact__copy" data-reveal>
+          <h2>Contact</h2>
+          <p>메일이나 소셜로 연락 주세요.</p>
+        </div>
+
+        <div class="contact__actions" data-reveal>
+          <a class="button button--primary" href="mailto:Leejeongwoo1103@gmail.com">
+            Leejeongwoo1103@gmail.com
+          </a>
+          <a
+            class="button button--secondary"
+            href="https://github.com/Craft374"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub 보기
+          </a>
+          <a
+            class="button button--secondary"
+            href="https://www.instagram.com/craft374_/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            class="button button--secondary"
+            href="https://x.com/Craft374_"
+            target="_blank"
+            rel="noreferrer"
+          >
+            X / Twitter
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

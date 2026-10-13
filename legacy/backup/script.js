@@ -19,7 +19,7 @@ const assetPresenceCache = new Map();
 const assetSourceCache = new Map();
 const carouselRegistry = new WeakMap();
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const projectAssetRoot = new URL("../assets/projects/", window.location.href).href;
+const projectAssetRoot = new URL("../../assets/projects/", window.location.href).href;
 const assetBaseAliases = {
   "prism-gameplay": "prism",
 };
